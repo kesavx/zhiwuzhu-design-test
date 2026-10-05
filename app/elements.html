@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>织物猪 · 服装设计工作台</title>
+<style>
+:root{--bg:#f5f5f7;--ink:#302c35;--muted:#746e7b;--line:#e4e0e7;--accent:#963c60;--pale:#f8edf2}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--bg);font:13px/1.65 "PingFang SC","Microsoft YaHei",sans-serif}h1,h2,h3,p,figure{margin:0}button,input,textarea,select{font:inherit;color:inherit}button{cursor:pointer;padding:8px 13px;background:white;border:1px solid var(--line);border-radius:6px}button:hover{border-color:var(--accent)}button:disabled{opacity:.45;cursor:default}button.active{background:var(--pale);color:var(--accent);border-color:var(--accent)}button.primary{background:var(--accent);color:white;border-color:var(--accent)}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #bf7b99;outline-offset:3px}header{padding:18px 30px;background:white;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.brand{font-size:18px;font-weight:650}.brand span{font-size:13px;font-weight:400;color:var(--muted);margin-left:16px}.badge{background:#efedf1;color:var(--muted);font-size:11px;padding:4px 8px;border-radius:4px}.shell{max-width:1500px;margin:auto;padding:26px 30px 45px}h1{font-size:26px;font-weight:650}h2{font-size:17px}h3{font-size:14px}.muted,small,.note{color:var(--muted)}.note{font-size:12px;margin-top:9px}.heading{margin-bottom:23px}.heading p{margin-top:5px;color:var(--muted)}.types{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}.type{text-align:left;padding:17px 20px;border-bottom-width:3px;background:white}.type b{display:block;font-size:16px}.type small{display:block;margin-top:3px}.type.active{background:white;border-color:var(--line);border-bottom-color:var(--accent)}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:24px;align-items:start}.panel{background:white;border:1px solid var(--line);border-radius:9px;padding:20px;margin-bottom:18px}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}.tabs,.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.tabs{margin-bottom:16px}.tabs button{min-width:76px}.source{display:flex;gap:18px;align-items:center;background:var(--bg);border-radius:6px;padding:14px;margin-bottom:15px}.source img{width:90px;height:116px;object-fit:cover;border-radius:3px}.source-text{flex:1;min-width:0}.source-text p{margin:5px 0 9px;color:var(--muted);font-size:12px}.empty-image{width:90px;height:116px;flex-shrink:0;display:grid;place-items:center;border:1px dashed #c8c0ce;color:var(--muted);font-size:12px;text-align:center}.field{width:100%;border:1px solid var(--line);background:white;padding:8px 9px;border-radius:5px;min-width:0}textarea.field{min-height:92px;resize:vertical}label{display:block;font-size:12px}label .field{margin-top:5px}.modifiers{margin-top:16px;border-top:1px solid var(--line);padding-top:15px}.modifiers>.row{margin:10px 0}.modifiers>.row button{font-size:12px}.mod-row{padding:14px 0;border-top:1px solid var(--line)}.mod-main{display:grid;grid-template-columns:90px 1fr auto;gap:12px;align-items:center}.mod-main img{width:74px;height:83px;object-fit:cover;border-radius:3px}.mod-reference{display:flex;flex-direction:column;align-items:start;gap:6px}.mod-reference button{padding:4px 6px;font-size:11px}.mod-kind{font-weight:600;color:var(--accent);margin-bottom:5px}.compact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.delete{font-size:12px;padding:5px 8px;color:var(--muted)}details{margin-top:9px;font-size:12px;color:var(--muted)}summary{cursor:pointer;width:fit-content}details textarea{margin-top:7px}.model-picks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}.model-picks button{display:flex;align-items:center;gap:9px;text-align:left;min-height:86px}.model-picks img{width:43px;height:60px;object-fit:cover}.model-picks small{display:block;font-size:10px}.model-empty{width:35px;font-size:24px;text-align:center;color:#bbb3bf}.styling{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.styling-card{padding:14px;background:var(--bg);border-radius:6px}.styling-card h3{margin-bottom:10px}.styling-card label+label{margin-top:9px}.preview{position:sticky;top:18px;background:white;border:1px solid var(--line);border-radius:9px;overflow:hidden}.preview-head{padding:17px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.preview-head h2{font-size:15px}.preview-body{padding:16px}.output-frame{aspect-ratio:3/4;background:#eeedf0;padding:13px;display:flex;flex-direction:column;justify-content:center;gap:12px;border-radius:3px}.output-pair{display:grid;grid-template-columns:1fr 1fr;gap:9px}.slot{border:1px dashed #c5bdcb;background:#f7f6f8;min-height:137px;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:10px;text-align:center;gap:7px;color:var(--muted)}.slot b{font-size:12px;color:var(--ink)}.slot small{font-size:10px}.frame-note{text-align:center;font-size:11px;color:var(--muted)}.preview h3{margin:14px 0 8px}.summary{font-size:12px;line-height:1.8;color:var(--muted);margin:14px 0;border-top:1px solid var(--line);padding-top:12px;white-space:pre-line;overflow-wrap:anywhere}.notice{background:var(--pale);padding:11px;color:#80576b;font-size:11px;border-radius:5px;margin:12px 0}.preview .primary{width:100%;margin-bottom:8px}.preview .row button{flex:1;font-size:12px}.detail-choices{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.detail-choices label{padding:7px 10px;background:var(--bg);border-radius:5px}input[type=checkbox]{accent-color:var(--accent)}.detail-order{list-style:none;padding:0;margin:12px 0}.detail-order li{display:flex;gap:6px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}.detail-order li span{flex:1}.detail-order button{padding:3px 8px}.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.detail-grid .slot{min-height:75px;font-size:11px}.measure-table{width:100%;border-collapse:collapse;margin-top:15px}.measure-table th,.measure-table td{text-align:left;border-bottom:1px solid var(--line);padding:9px 5px;font-size:12px}.measure-table th{font-weight:500;color:var(--muted)}.measure-table input{max-width:150px}.measure-list{padding:0;list-style:none;margin:12px 0}.measure-list li{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:7px 0;gap:12px;font-size:12px}.measure-list b{white-space:nowrap}.size-placeholder{height:180px;background:#eeedf0;display:grid;place-items:center;color:var(--muted);text-align:center;padding:20px}.custom-entry{display:flex;gap:8px;margin-top:12px}.custom-entry input{flex:1}.hidden{display:none!important}#toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#302c35;color:white;padding:12px 20px;border-radius:7px;max-width:90%;width:max-content;z-index:10;font-size:12px;box-shadow:0 4px 20px #0002}#toast:empty{display:none}@media(max-width:1100px){.shell{padding:23px 20px}.workspace{grid-template-columns:minmax(0,1fr) 300px;gap:17px}.model-picks button{flex-direction:column;align-items:start}.panel{padding:16px}.mod-main{grid-template-columns:77px 1fr auto}}@media(max-width:760px){header{padding:15px}.brand span{display:none}.shell{padding:20px 12px}.heading h1{font-size:23px}.types{gap:7px}.type{padding:12px 9px}.type b{font-size:13px}.type small{font-size:10px}.workspace{display:block}.preview{position:static}.styling,.compact-grid{grid-template-columns:1fr}.mod-main{grid-template-columns:70px minmax(0,1fr) auto;gap:8px}.source{padding:10px;gap:12px}.model-picks{gap:7px}.model-picks button{padding:10px}.output-frame{max-width:380px;margin:auto}.panel-head{align-items:start}.custom-entry{flex-wrap:wrap}.measure-table input{width:100%}}
+.output-pair.single{grid-template-columns:1fr}.model-actions{margin-bottom:8px}.model-actions+.note{margin-bottom:16px}
+.column-title{margin:0 0 13px;font-size:18px}.outfit-tabs{margin:8px 0}.garment-tabs{margin:16px 0 12px}#requirements-workbench{min-width:0}#requirements-workbench #generate{width:100%}.preview-body>#preview-title{margin-top:0}
+.design-plan{border-top:1px solid var(--line);padding:15px 0}.plan-heading{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:10px}.plan-heading h3{margin:0;font-size:14px}.plan-heading .badge{font-size:9px}.plan-image{background:#f6f5f7;border:1px solid var(--line);padding:8px;border-radius:5px}.plan-image .output-frame{aspect-ratio:3/4}.plan-image .slot{min-height:95px}.plan-image .output-frame .frame-note{display:none}.plan-caption{font-size:10px;color:var(--muted);margin:8px 0}.plan-actions{display:grid;grid-template-columns:auto 1fr auto;gap:5px}.plan-actions button{padding:7px 5px;font-size:11px}.plan-edit textarea{margin:8px 0}.empty-plans{padding:35px 8px;color:var(--muted)}.preview{position:static}
+</style>
+<link rel="stylesheet" href="history-library.css">
+</head>
+<body>
+<header><div class="brand">织物猪<span>服装设计工作台</span></div><span class="badge">静态演示 · 未接入生图</span></header>
+<main class="shell"><div class="heading"><h1>从改款，到完整呈现</h1><p>按图片用途配置。未填写的修改沿用基础图，结果确认后再制作展示与尺寸图。</p></div>
+<nav class="types" aria-label="图片类型"><button class="type active" data-type="model" data-view="model" aria-pressed="true"><b>模特上身图</b><small>改款、搭配与穿法对比</small></button><button class="type" data-type="product" data-view="product" aria-pressed="false"><b>单品展示图</b><small>正背面与细节组合图</small></button><button class="type" data-type="size" data-view="size" aria-pressed="false"><b>尺寸标注图</b><small>手动填写建议尺寸</small></button></nav>
+<div class="workspace"><section id="requirements-workbench"><h2 class="column-title">生图要求工作台</h2><div id="editor"></div></section><aside class="preview"><div class="preview-head"><h2>生图产物预览</h2><span class="badge">静态演示</span></div><div class="preview-body"><button id="generate" class="primary">生成图片</button><p class="note">每次生成一张图、一个设计方案；未接入生图服务。</p><h3 id="preview-title">模特上身图</h3><div id="preview-content"></div><div class="notice">图片位置为布局示意，不是真实生成结果。素材只在本地使用。</div></div></aside></div><section class="panel" id="prompt-panel" style="margin-top:24px"><div class="panel-head"><h2>完整版提示词</h2><button id="copy-prompt">复制提示词</button></div><p class="note">根据当前生效配置自动组装，未进行图片内容识别。参考图编号对应下方用途说明；仅复制文字不会携带图片，实际生图时需同时提供对应素材。</p><textarea id="full-prompt" class="field" readonly aria-label="完整版提示词" style="min-height:360px;resize:vertical"></textarea></section></main><input id="garment-file" type="file" accept="image/jpeg,image/png,image/webp" hidden aria-label="选择服装参考图片"><input id="model-file" type="file" accept="image/jpeg,image/png,image/webp" hidden aria-label="选择模特基础素材"><div id="toast" role="status" aria-live="polite"></div>
+<script>
+const $=id=>document.getElementById(id);
+const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const labels={model:'模特上身图',product:'单品展示图',size:'尺寸标注图'};
+const kinds=['结构部位','面料','颜色','图案','辅料'];
+const garments={上衣:{base:'collar-base.jpg',note:'只将图1的毛领换为图2的立领形状，其余版型、肩部、袖型、门襟、下摆、纽扣和腰带保留。新领口沿用图1的米白色与针织质感，不带入图2颜色、格纹、面料或肩袢。（演示约定，需确认）',mods:[{kind:'结构部位',part:'领口',ref:'collar-source.jpg',note:''}]},下装:{base:'',note:'',mods:[]},连衣裙:{base:'',note:'',mods:[]}};
+const product={上衣:{confirmed:false,selected:['领口','图案','门襟','袖口'],custom:[]},下装:{confirmed:false,selected:['腰头','面料','口袋','裤脚/裙摆'],custom:[]},连衣裙:{confirmed:false,selected:['领口','腰部/褶裥','图案','装饰','袖口','背面开合'],custom:[]}};
+const size={上衣:{confirmed:false,values:{}},下装:{confirmed:false,values:{},subtype:'裤装'},连衣裙:{confirmed:false,values:{}}};
+const candidates={上衣:['帽子','领口','门襟','下摆','袖口','口袋','图案','面料','其他'],下装:['腰头','口袋','裤脚/裙摆','图案','面料','其他'],连衣裙:['领口','腰部/褶裥','图案','装饰','袖口','背面开合','裙摆','面料','其他']};
+let type='model',garment='上衣',productGarment='上衣',sizeGarment='上衣',model=1,combination='单人模特',outfit='separates',timer;
+const styling=[{hem:'沿用基础图',opening:'沿用基础图',neck:'沿用基础图'}];
+const models=[1,2,3].map(id=>({id,src:'assets/fixed-model-'+id+'.jpg',local:false}));
+let uploadMode='add',replaceTarget=1;
+function chooseModelFile(mode){uploadMode=mode;replaceTarget=model;$('model-file').value='';$('model-file').click()}
+async function loadModelFile(file){
+  if(!file)return;
+  if(!['image/jpeg','image/png','image/webp'].includes(file.type)){notify('请选择 JPG、PNG 或 WebP 图片');return}
+  if(file.size>20*1024*1024){notify('图片不能超过 20 MB');return}
+  const mode=uploadMode,target=replaceTarget,url=URL.createObjectURL(file),probe=new Image();
+  try{probe.src=url;await probe.decode()}catch{URL.revokeObjectURL(url);notify('图片无法读取，请重新选择有效图片');return}
+  if(mode==='replace'){
+    const selected=models.find(item=>item.id===target);
+    if(selected.local)URL.revokeObjectURL(selected.src);
+    selected.src=url;selected.local=true;model=target;
+  }else{model=Math.max(...models.map(item=>item.id))+1;models.push({id:model,src:url,local:true})}
+  render();notify(mode==='replace'?'已替换当前模特素材，仅在本页生效':'已添加并选中新模特，仅在本页生效');
+}
+window.addEventListener('beforeunload',()=>models.filter(item=>item.local).forEach(item=>URL.revokeObjectURL(item.src)));
+
+let garmentUploadTarget=null;
+const garmentUploadUrls=new Set();
+function garmentImage(src){return src.startsWith('blob:')?src:'assets/'+src}
+function chooseGarmentFile(index){
+ const g=garments[garment];
+ garmentUploadTarget={owner:g,target:index===undefined?g:g.mods[index],key:index===undefined?'base':'ref'};
+ $('garment-file').value='';$('garment-file').click();
+}
+async function loadGarmentFile(file){
+ if(!file||!garmentUploadTarget)return;
+ const {owner,target,key}=garmentUploadTarget;
+ if(!['image/jpeg','image/png','image/webp'].includes(file.type)){notify('请选择 JPG、PNG 或 WebP 图片');return}
+ if(file.size>20*1024*1024){notify('图片不能超过 20 MB');return}
+ const url=URL.createObjectURL(file),probe=new Image();
+ try{probe.src=url;await probe.decode()}catch{URL.revokeObjectURL(url);notify('图片无法读取，请重新选择有效图片');return}
+ if(key==='ref'&&!owner.mods.includes(target)){URL.revokeObjectURL(url);return}
+ target[key]=url;garmentUploadUrls.add(url);
+ render();notify('已更新'+(key==='base'?'单品基础图':'本条参考图')+'，仅本地预览，刷新后重置');
+}
+window.addEventListener('beforeunload',()=>garmentUploadUrls.forEach(url=>URL.revokeObjectURL(url)));
+
+// 内部任务数据，不展示打包提示词；正式提示词模板与模型调用仍需后端实现。
+function packGenerationRequest(){
+ return {
+  type,
+  fallback:{empty:'inherit_garment_base',missing:'infer_from_overall_style',explicit:'preserve_user_requirements',measurements:'never_invent'},
+  outfit:type==='model'?outfit:null,
+  garments:type==='model'?activeGarments().map(name=>({name,base:garments[name].base||null,note:garments[name].note.trim()||null,changes:garments[name].mods.filter(m=>m.ref||m.part.trim()||m.note.trim()).map(m=>({...m}))})):[],
+  model:type==='model'?{reference:models.find(m=>m.id===model)?.src||null,combination,styling:{...styling[0]}}:null,
+  product:type==='product'?{garment:productGarment,details:[...product[productGarment].selected]}:null,
+  size:type==='size'?{garment:sizeGarment,unit:'cm',units:size[sizeGarment].units||{},lineTypes:size[sizeGarment].lineTypes||{},subtype:size[sizeGarment].subtype||null,views:size[sizeGarment].views||'正面',detailNote:size[sizeGarment].detailNote||'',values:Object.fromEntries(measureFields().filter(f=>size[sizeGarment].values[f]!==undefined&&size[sizeGarment].values[f]!=='').map(f=>[f,size[sizeGarment].values[f]]))}:null
+ };
+}
+
+function buildFullPrompt(){
+ const r=packGenerationRequest(),lines=['请生成一张'+labels[type]+'，仅输出一个设计方案。','画幅比例为3:4，浅灰色背景，服装纹理清晰，结构与人体比例自然。'],refs=[];
+ const reference=(src,role)=>{if(!src)return '未提供';refs.push('参考图'+(refs.length+1)+'：'+role);return '参考图'+refs.length};
+ if(type==='model'){
+  lines.push('搭配：'+(outfit==='dress'?'单件连衣裙':'上衣＋下装')+'。');
+  r.garments.forEach(g=>{
+   const base=reference(g.base,g.name+'基础图');
+   lines.push(g.name+'：'+(g.base?'以'+base+'为基础，未明确修改的版型、材质、颜色和细节保留。':'未提供基础图，不臆称已有款式；结合明确要求及整体风格补充。'));
+   if(g.note)lines.push('用户对'+g.name+'的要求：'+g.note);
+   g.changes.forEach((m,i)=>{
+    const ref=reference(m.ref,g.name+'第'+(i+1)+'条'+m.kind+'修改参考');
+    lines.push('局部修改'+(i+1)+'：类别='+m.kind+'；作用范围='+(m.part.trim()||'未指定，不擅自扩大修改范围')+'；参考='+ref+'。仅借用指定类别与部位，不带入无关设计。'+(m.note.trim()?'补充：'+m.note.trim():''));
+   });
+  });
+  lines.push('模特身份使用'+reference(r.model.reference,'模特身份参考')+'，不借用该图的服装替代上述单品。');
+  lines.push('展示方式：'+combination+'。'+(combination==='正面 + 背面'?'同一张图中展示同一模特同一套服装的正面与背面，款式与穿法保持一致。':'单人正面展示。'));
+  lines.push('穿搭：衣摆='+r.model.styling.hem+'；开合='+r.model.styling.opening+'；领口='+r.model.styling.neck+'。');
+ }else if(type==='product'){
+  lines.push('展示单品：'+r.product.garment+'。未提供真实确认图（当前确认图入口仍为演示），正式生成前需提供已确认设计图，不把占位状态当成素材。');
+  lines.push('保持已确认款式，不重新改款；一张组合图包含单品正背面及局部细节。');
+  lines.push('细节按顺序展示：'+(r.product.details.join('、')||'未选择，不自行添加')+'。原图看不到的结构需补充参考确认，不编造。');
+ }else{
+  lines.push('标注单品：'+r.size.garment+'。未提供真实确认图，正式生成前需提供已确认设计图。保持款式不变，仅进行建议尺寸标注。');
+  lines.push('已填写尺寸：'+(Object.entries(r.size.values).map(([key,value])=>key+'：'+value+' cm').join('；')||'无')+'。');
+  lines.push('未填写的尺寸不标数字，不根据图片推算尺寸。该图用于设计沟通，不是生产工艺单。');
+ }
+ lines.push('规则：明确填写的要求优先；未填写的修改沿用对应单品基础图；没有参考依据的非尺寸内容按整体风格合理补充。不得编造尺寸。多项明确要求冲突时需确认，不擅自取舍。');
+ return ['【参考素材及用途】',refs.length?refs.join('\n'):'当前页面没有可用的真实图片素材。','【完整生成要求】',...lines].join('\n\n');
+}
+function updateFullPrompt(){$('full-prompt').value=buildFullPrompt()}
+async function copyFullPrompt(){
+ const field=$('full-prompt');
+ try{await navigator.clipboard.writeText(field.value);notify('已复制完整版提示词')}
+ catch{field.focus();field.select();notify('自动复制不可用，已选中文字，请手动复制')}
+}
+
+function notify(message){$('toast').textContent=message;clearTimeout(timer);timer=setTimeout(()=>$('toast').textContent='',4500)}
+function tabs(current,attribute){return `<div class="tabs" aria-label="服装品类">${Object.keys(garments).map(g=>`<button data-${attribute}="${g}" class="${g===current?'active':''}" aria-pressed="${g===current}">${g}</button>`).join('')}</div>`}
+function options(values,current){return values.map(v=>`<option${v===current?' selected':''}>${esc(v)}</option>`).join('')}
+function baseBlock(){const g=garments[garment];return `<div class="source">${g.base?`<img src="${esc(garmentImage(g.base))}" alt="${garment}基础参考，非生成结果">`:'<div class="empty-image">基础图<br>待选择</div>'}<div class="source-text"><h3>${garment}基础图</h3><p>${g.base?'图 1 · 原衣服。只有明确填写的内容参与修改。':'选择这件服装的基础参考图；未填写的修改沿用该图。'}</p><button id="choose-base">${g.base?'替换基础图':'上传基础图'}</button></div></div>`}
+function renderMods(){return garments[garment].mods.map((m,i)=>`<article class="mod-row" data-mod="${i}"><div class="mod-main"><div class="mod-reference">${m.ref?`<img src="${esc(garmentImage(m.ref))}" alt="${esc(m.kind)}参考，非生成结果">`:'<small>参考未选择</small>'}<button data-ref="${i}">${m.ref?'替换参考图':'上传参考图'}</button></div><div><div class="mod-kind">${m.kind}</div><label>作用部位 / 范围<input class="field" data-part="${i}" value="${esc(m.part)}" placeholder="例如：领口、左袖口、整件"></label></div><button class="delete" data-delete-mod="${i}" aria-label="删除第${i+1}条${m.kind}修改">删除</button></div><details><summary>单条补充备注${m.note?' · 已填写':''}</summary><textarea class="field" data-mod-note="${i}" aria-label="第${i+1}条修改备注" placeholder="仅补充这条修改需要的例外要求">${esc(m.note)}</textarea></details></article>`).join('')}
+function styleCard(index,title){const s=styling[index];return `<div class="styling-card"><h3>${title}</h3>${[['hem','衣摆',['沿用基础图','自然','左掖','右掖']],['opening','开合',['沿用基础图','正常','敞开','扣合']],['neck','领口',['沿用基础图','正常','左斜肩','右斜肩']]].map(([key,label,values])=>`<label>${label}<select class="field" data-style="${index}" data-key="${key}" aria-label="${title}${label}">${options(values,s[key])}</select></label>`).join('')}</div>`}
+function activeGarments(){return outfit==='dress'?['连衣裙']:['上衣','下装']}
+function outfitControls(){return `<label>服装搭配（两种互斥）</label><div class="tabs outfit-tabs"><button data-outfit="separates" class="${outfit==='separates'?'active':''}" aria-pressed="${outfit==='separates'}">上衣＋下装</button><button data-outfit="dress" class="${outfit==='dress'?'active':''}" aria-pressed="${outfit==='dress'}">单件连衣裙</button></div><p class="note">当前模特穿${outfit==='dress'?'一件连衣裙，不使用上衣和下装设置':'上衣与下装组成的一套搭配，不使用连衣裙设置'}。切换会保留已填内容，但不会混入本次要求。</p>${outfit==='separates'?`<div class="tabs garment-tabs" aria-label="分别编辑搭配单品">${activeGarments().map(g=>`<button data-garment="${g}" class="${g===garment?'active':''}" aria-pressed="${g===garment}">编辑${g}</button>`).join('')}</div>`:'<h3 class="garment-tabs">编辑连衣裙</h3>'}`}
+function renderModel(){return `<section class="panel"><div class="panel-head"><h2>模特穿什么</h2><span class="badge">先选搭配，再配置单品</span></div>${outfitControls()}${baseBlock()}<p class="note">基础图与修改参考支持 JPG、PNG、WebP，单张不超过 20 MB；仅本地预览，刷新后重置。</p><label>这件服装的修改说明<textarea class="field" id="garment-note" placeholder="集中描述想改哪里、改成什么；未提及的部分沿用基础图。">${esc(garments[garment].note)}</textarea></label><div class="modifiers"><h3>可选修改</h3><p class="note">按需增加，可为多个部位分别放参考；没有添加的类别沿用基础图。</p><div class="row">${kinds.map(k=>`<button data-add-kind="${k}">＋ ${k}</button>`).join('')}</div><div id="mod-list">${renderMods()}</div>${garments[garment].mods.length?'':'<p class="note">尚未添加修改，整件沿用基础图。</p>'}</div></section><section class="panel"><div class="panel-head"><h2>人物与穿搭</h2><span class="badge">固定 3:4 · 浅灰背景</span></div><div class="model-picks" aria-label="选择模特">${models.map(item=>`<button data-model="${item.id}" aria-pressed="${model===item.id}" class="${model===item.id?'active':''}"><img src="${esc(item.src)}" alt="模特${item.id}身份参考，非生成结果"><span>模特 ${item.id}<small>${item.local?'本地上传素材':'预设身份参考'}</small></span></button>`).join('')}</div><div class="row model-actions"><button id="replace-model">替换当前模特</button><button id="upload-model">＋ 上传新模特素材</button></div><p class="note">支持 JPG、PNG、WebP，单张不超过 20 MB。仅本地预览，不发送服务器；刷新后恢复预设素材。</p><label>展示组合<select class="field" id="combination">${options(['单人模特','正面 + 背面'],combination)}</select></label><p class="note">${combination==='单人模特'?'单人正面展示，使用下方一套穿搭配置。':'正面与背面展示同一套款式及穿法，共用以下配置。'}</p><div class="styling">${styleCard(0,combination==='单人模特'?'单人穿搭':'正背面共用穿搭')}</div></section>`}
+function confirmedBlock(mode,g){const state=mode==='product'?product[g]:size[g];return `<div class="source"><div class="empty-image">${state.confirmed?'待接入<br>真实确认图':'确认图<br>未选择'}</div><div class="source-text"><h3>${g}的已确认设计图</h3><p>${state.confirmed?'已体验选择入口；尚未绑定真实确认结果。':'从已确认结果中选择，或上传已有确认图。'}</p><button id="choose-confirmed">${state.confirmed?'重置确认图入口':'选择 / 上传确认图入口'}</button></div></div>`}
+function renderProduct(){const p=product[productGarment];return `<section class="panel"><div class="panel-head"><h2>确认款式与输出内容</h2><span class="badge">不重新改款</span></div>${tabs(productGarment,'product-garment')}${productGarment==='下装'?`<label>下装类型<select id="product-subtype" class="field"><option value="">请选择</option><option ${p.subtype==='裤子'?'selected':''}>裤子</option><option ${p.subtype==='半身裙'?'selected':''}>半身裙</option></select></label>`:''}${confirmedBlock('product',productGarment)}<p class="note">一次生成一张白底拼接图：上方左正面、右背面，下方按所选顺序展示细节。上衣、裤子和连衣裙自动使用对应内置模板，可在管理后台查看。没有背面参考时允许同款合理补全。</p></section><section class="panel"><div class="panel-head"><h2>细节选择与排序</h2><span class="badge">已选 ${p.selected.length} / 6</span></div><p class="note">${productGarment==='连衣裙'?'连衣裙参考竖向模板，建议选择六项细节，按两行三列展示；可取消或自定义部位。':'勾选需要展示的部位，使用上下按钮调整拼图顺序。'}最多选择六个；不存在的部位会省略，不强行凑格。</p><div class="detail-choices">${[...candidates[productGarment],...p.custom].map(c=>`<label><input type="checkbox" data-detail="${esc(c)}" ${p.selected.includes(c)?'checked':''}> ${esc(c)}</label>`).join('')}</div><div class="custom-entry"><input id="custom-detail" class="field" aria-label="自定义细节部位" placeholder="输入自定义部位"><button id="add-custom-detail">添加并选择</button></div><ol class="detail-order">${p.selected.map((c,i)=>`<li><span>${i+1}. ${esc(c)}</span><button data-move="${i}" data-direction="-1" aria-label="上移${esc(c)}" ${i===0?'disabled':''}>上移</button><button data-move="${i}" data-direction="1" aria-label="下移${esc(c)}" ${i===p.selected.length-1?'disabled':''}>下移</button><button data-remove-detail="${i}" aria-label="移除${esc(c)}">移除</button></li>`).join('')}</ol><p class="note">细节默认单排；选择五至六项时可分两排，主体正背面保持在上方。</p></section>`}
+function measureFields(){const core=sizeGarment==='上衣'?['衣长','肩宽','胸围','袖长','袖口宽','下摆宽','侧到前中落差']:sizeGarment==='下装'?[size.下装.subtype==='裤装'?'裤长':'裙长','腰围','臀围','腰头高',size.下装.subtype==='裤装'?'裤脚口宽':'下摆围']:['裙长','肩宽','胸围','腰围','袖长','下摆围'];return [...new Set([...core,...(size[sizeGarment].customFields||[])])];}
+function renderSize(){const state=size[sizeGarment];return `<section class="panel"><div class="panel-head"><h2>人工尺寸与说明</h2><span class="badge">原始值不换算</span></div>${tabs(sizeGarment,'size-garment')}${confirmedBlock('size',sizeGarment)}${sizeGarment==='下装'?`<label>下装品类<select id="bottom-subtype" class="field">${options(['裤装','裙装'],size.下装.subtype)}</select></label>`:''}<label>主体视图<select id="size-views" class="field">${options(['正面','正背面'],state.views||'正面')}</select></label><label>局部细节要求<input id="size-detail-note" class="field" value="${esc(state.detailNote||'')}" placeholder="如领口、门襟、袖口；或腰头、拼接、下摆"></label><table class="measure-table"><thead><tr><th>项目</th><th>数值或说明</th><th>单位</th><th>标注方式</th></tr></thead><tbody>${measureFields().map(f=>`<tr><td>${esc(f)}</td><td><input class="field" type="text" data-measure="${esc(f)}" value="${esc(state.values[f]??'')}" placeholder="如66（拉伸至78）"></td><td><select class="field" data-measure-unit="${esc(f)}">${['cm','mm','倍',''].map(u=>`<option value="${u}" ${(state.units?.[f]??'cm')===u?'selected':''}>${u||'无单位'}</option>`).join('')}</select></td><td><select class="field" data-measure-line="${esc(f)}">${options(['文字','横向','竖向','斜向'],state.lineTypes?.[f]||'文字')}</select></td></tr>`).join('')}</tbody></table><div style="display:flex;gap:8px;margin:12px 0"><input id="custom-measure-name" class="field" placeholder="自定义项目，如拼接褶量"><button id="add-measure">添加标注项</button></div><p class="note">支持数值、区间、松紧前后值及文字说明。围度默认文字标注，不换算为平铺宽度；尺寸线位置在成图后手动调整。未填项目不标注。</p><button id="try-annotations" ${state.reference?'':'disabled'}>直接在确认图上试标注（不调用 AI）</button></section>`;}
+
+function styleText(i){const s=styling[i];return esc('衣摆：'+s.hem+' · 开合：'+s.opening+' · 领口：'+s.neck);}
+function renderPreviewLayout(){$('preview-title').textContent=labels[type];if(type==='model'){const single=combination==='单人模特';$('preview-content').innerHTML=`<div class="output-frame"><div class="output-pair ${single?'single':''}">${(single?[0]:[0,1]).map(i=>`<div class="slot"><b>${single?'单人正面':(i?'背面':'正面')}</b><small>模特 ${model} · 身份参考</small><small>${styleText(0)}</small><small>待生成</small></div>`).join('')}</div><p class="frame-note">${single?'单人画面':'组图槽'} · 固定 3:4 / 浅灰背景<br>仅版式占位，没有合成效果</p></div>`}else if(type==='product'){const selected=product[productGarment].selected;$('preview-content').innerHTML=`<h3>${productGarment}正背面</h3><div class="output-pair"><div class="slot"><b>正面</b><small>未生成</small></div><div class="slot"><b>背面</b><small>未生成</small></div></div><h3>局部细节拼图</h3><div class="detail-grid">${Array.from({length:6},(_,i)=>`<div class="slot" data-detail-slot="${i}">${selected[i]?`${i+1}. ${esc(selected[i])}<small>待生成</small>`:'空位保留'}</div>`).join('')}</div><p class="note">两列三行仅为演示建议。组合图尚未生成，尚无真实确认图。</p>`}else{$('preview-content').innerHTML=`<div class="size-placeholder">${sizeGarment}确认图位置<br>未接入图像标注与生成</div><h3>${sizeGarment} · 建议尺寸标注清单（布局演示）</h3><ul class="measure-list">${measureFields().map(f=>`<li><span>${f}</span><b>${size[sizeGarment].values[f]!==undefined&&size[sizeGarment].values[f]!==''?esc(size[sizeGarment].values[f])+' cm':'待填写'}</b></li>`).join('')}</ul><p class="note">此清单随填写更新，仅为建议尺寸，不是工艺单。</p>`}}
+const plans={model:[1],product:[1],size:[1]};
+const planNotes={model:{},product:{},size:{}};
+const planSnapshots={model:{},product:{},size:{}};
+let building=false,generationTimer;
+function refreshPreview(){
+ updateFullPrompt();
+  renderPreviewLayout();
+  const liveLayout=$('preview-content').innerHTML;
+  $('preview-content').innerHTML=plans[type].map(id=>{
+    const snapshot=planSnapshots[type][id];
+    return `<article class="design-plan" data-plan="${id}"><div class="plan-heading"><h3>设计方案</h3><span class="badge">${snapshot?'演示版式 · 非生成图':'待生成'}</span></div><div class="plan-image">${snapshot?snapshot.layout:liveLayout}</div><p class="plan-caption">${snapshot?'本地配置快照，不是实际生图结果':'预览占位 · 点击上方生成按钮体验流程'}</p><div class="plan-actions"><button data-tune="${id}">微调</button><button data-export="${id}">导出高画质图片</button><button data-delete-plan="${id}">删除</button></div><details class="plan-edit" ${planNotes[type][id]!==undefined?'open':''}><summary>方案微调说明</summary><textarea class="field" data-plan-note="${id}" aria-label="${id}号方案微调说明" placeholder="只描述这张图要调整的地方">${esc(planNotes[type][id]||'')}</textarea><button data-apply-tune="${id}">提交微调（演示）</button></details></article>`;
+  }).join('')||'<p class="empty-plans">方案已全部删除。点击“生成图片”可重新创建一个方案预览。</p>';
+  $('generate').textContent=building?'生成中（演示）…':'生成图片';
+  $('generate').disabled=building;
+}
+function generatePlans(){
+  if(building)return;
+  building=true;const targetType=type;
+  renderPreviewLayout();const snapshot={layout:$('preview-content').innerHTML,request:packGenerationRequest()};
+  refreshPreview();
+  generationTimer=setTimeout(()=>{plans[targetType]=[1];planSnapshots[targetType]={1:snapshot};planNotes[targetType]={};building=false;refreshPreview();notify('已展示一个方案的演示版式；未调用生图 AI，没有真实图片。')},650);
+}
+document.addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;const d=b.dataset;
+  if(d.tune){planNotes[type][d.tune]=planNotes[type][d.tune]||'';refreshPreview();document.querySelector('[data-plan-note="'+d.tune+'"]').focus()}
+  if(d.export)notify('当前没有真实生成图片，无法导出高画质图片。接入生图后从此处导出该方案。');
+  if(d.deletePlan){plans[type]=plans[type].filter(id=>id!==Number(d.deletePlan));delete planSnapshots[type][d.deletePlan];delete planNotes[type][d.deletePlan];refreshPreview();notify('已删除'+d.deletePlan+'号演示方案；点击生成图片可重新展示。')}
+  if(d.applyTune)notify('已保留该方案的微调说明；尚未接入真实图片编辑。');
+});
+document.addEventListener('input',e=>{if(e.target.dataset.planNote)planNotes[type][e.target.dataset.planNote]=e.target.value});
+function render(){document.querySelectorAll('[data-type]').forEach(b=>{b.classList.toggle('active',b.dataset.type===type);b.setAttribute('aria-pressed',String(b.dataset.type===type))});$('editor').innerHTML=type==='model'?renderModel():type==='product'?renderProduct():renderSize();refreshPreview()}
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;const d=b.dataset;if(b.id==='copy-prompt'){copyFullPrompt();return}if(d.demo){notify(d.demo);return}if(d.type){type=d.type;render();return}if(d.outfit){outfit=d.outfit;garment=outfit==='dress'?'连衣裙':'上衣';render();return}if(d.garment){garment=d.garment;render();return}if(d.productGarment){productGarment=d.productGarment;render();return}if(d.sizeGarment){sizeGarment=d.sizeGarment;render();return}if(d.addKind){garments[garment].mods.push({kind:d.addKind,part:'',ref:'',note:''});render();notify('已增加一条'+d.addKind+'修改');return}if(d.deleteMod!==undefined){garments[garment].mods.splice(Number(d.deleteMod),1);render();return}if(d.ref!==undefined){chooseGarmentFile(Number(d.ref));return}if(d.model){model=Number(d.model);render();notify('已切换模特 '+model+'，此图仅作为身份参考。');return}if(b.id==='replace-model'){chooseModelFile('replace');return}if(b.id==='upload-model'){chooseModelFile('add');return}if(d.move!==undefined){const arr=product[productGarment].selected;const i=Number(d.move),j=i+Number(d.direction);[arr[i],arr[j]]=[arr[j],arr[i]];render();return}if(d.removeDetail!==undefined){product[productGarment].selected.splice(Number(d.removeDetail),1);render();return}if(b.id==='choose-base'){chooseGarmentFile();return}if(b.id==='choose-confirmed'){const s=type==='product'?product[productGarment]:size[sizeGarment];s.confirmed=!s.confirmed;render();notify(s.confirmed?'已演示确认图入口，尚未绑定真实图片。':'已重置确认图入口');return}if(b.id==='add-custom-detail'){const value=$('custom-detail').value.trim(),p=product[productGarment];if(!value){notify('请先填写自定义部位');return}if(p.selected.length>=6){notify('最多选择六个细节，请先移除一个');return}if(p.selected.includes(value)){notify('此部位已选择');return}if(![...candidates[productGarment],...p.custom].includes(value))p.custom.push(value);p.selected.push(value);render();return}if(b.id==='generate')generatePlans()});
+document.addEventListener('input',e=>{const d=e.target.dataset;if(e.target.id==='garment-note'){garments[garment].note=e.target.value}if(d.part!==undefined){garments[garment].mods[Number(d.part)].part=e.target.value}if(d.modNote!==undefined){garments[garment].mods[Number(d.modNote)].note=e.target.value}if(d.measure){size[sizeGarment].values[d.measure]=e.target.value;refreshPreview()}if(e.target.id==='garment-note'||d.part!==undefined||d.modNote!==undefined)updateFullPrompt()});
+document.addEventListener('change',e=>{if(e.target.id==='garment-file'){loadGarmentFile(e.target.files[0]);return}if(e.target.id==='model-file'){loadModelFile(e.target.files[0]);return}const d=e.target.dataset;if(e.target.id==='combination'){combination=e.target.value;render()}if(d.style!==undefined){styling[Number(d.style)][d.key]=e.target.value;refreshPreview()}if(d.detail){const p=product[productGarment];if(e.target.checked){if(p.selected.length>=6){e.target.checked=false;notify('最多选择六个细节，请先移除一个');return}p.selected.push(d.detail)}else p.selected=p.selected.filter(v=>v!==d.detail);render()}if(e.target.id==='bottom-subtype'){size.下装.subtype=e.target.value;render()}});
+render();
+</script>
+<script src="prompt-templates.js"></script>
+<script src="prompt-admin.js"></script>
+<script src="annotation-editor.js"></script>
+<script src="live-runtime.js"></script>
+<script src="history-library.js"></script>
+</body></html>

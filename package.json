@@ -1,0 +1,34 @@
+{
+  "name": "zhiwuzhu-design-test",
+  "version": "1.0.0",
+  "description": "织物猪设计test：本地服装设计工作台，安装与 API 配置分离。",
+  "private": true,
+  "bin": {
+    "zhiwuzhu-design": "bin/cli.cjs"
+  },
+  "scripts": {
+    "start": "node bin/cli.cjs start",
+    "test": "node --test app/server.test.cjs app/openai.test.cjs app/history.test.cjs test/*.test.cjs"
+  },
+  "engines": {
+    "node": ">=24.5.0"
+  },
+  "files": [
+    "app/*.cjs",
+    "app/*.js",
+    "app/*.html",
+    "app/*.css",
+    "app/assets",
+    "app/prompts",
+    "bin",
+    "README.md",
+    "test"
+  ],
+  "dependencies": {
+    "sharp": "0.35.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kesavx/zhiwuzhu-design-test.git"
+  }
+}
